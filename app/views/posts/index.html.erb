@@ -1,0 +1,13 @@
+<h1>CREATE TODO</h1>
+<%= form_for @post, path: posts_path do |f| %>
+  <%= f.label :text %>
+  <%= f.text_field :text %>
+  <%= f.submit "Submit form!" %>
+<% end %>
+
+<h1>TODOS</h1>
+
+<% @posts.each do |post| %>
+  <li><%= post.text %></li>
+<% end %>
+
